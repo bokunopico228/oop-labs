@@ -10,7 +10,7 @@ public class Main {
 
         while (true) {
             try{
-                System.out.print("enter numbers divided by ',' or q to quit: ");
+                System.out.print("enter numbers divided by ',' or '\\n'. enter q to quit: ");
                 inp = scan.nextLine();
                 if (inp.equals("q")) {
                     break;

@@ -6,10 +6,13 @@ public class StringCalculator{
         if (numbers.isEmpty()){
             return res;
         }
+        numbers = numbers.replaceAll("\\\\n",",");
         String[] num_array = numbers.split(",");
+
         if (numbers.endsWith(",")){
             throw new IllegalArgumentException("incorrect input");
         }
+
         for (String num : num_array){
             try{
                 res += Integer.parseInt(num);
