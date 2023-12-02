@@ -21,4 +21,10 @@ public class SCTest {
         StringCalculator sc = new StringCalculator();
         assertEquals(4, sc.add("4"));
     }
+
+    @Test
+    void test4() {
+        StringCalculator sc = new StringCalculator();
+        assertEquals(6, sc.add("1,2,3"));
+    }
 }

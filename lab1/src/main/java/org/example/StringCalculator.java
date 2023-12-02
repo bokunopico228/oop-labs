@@ -7,7 +7,7 @@ public class StringCalculator{
             return res;
         }
         String[] num_array = numbers.split(",");
-        if (num_array.length > 2 || numbers.endsWith(",")){
+        if (numbers.endsWith(",")){
             throw new IllegalArgumentException("incorrect input");
         }
         for (String num : num_array){
