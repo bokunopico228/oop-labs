@@ -1,6 +1,8 @@
 package org.example;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Comparator;
 
 public class StringCalculator{
     public int add(String numbers){
@@ -27,6 +29,8 @@ public class StringCalculator{
             String[] dels = numbers.substring(3, a).split("]\\[");
             numbers = numbers.substring(m2.end());
 
+            Arrays.sort(dels, Comparator.comparingInt(String::length).reversed());
+//            System.out.println(Arrays.toString(dels));
             for (String del : dels){
                 numbers = numbers.replace(del,",");
             }
