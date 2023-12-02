@@ -33,4 +33,10 @@ public class SCTest {
         StringCalculator sc = new StringCalculator();
         assertEquals(6, sc.add("-5,3\\n8"));
     }
+
+    @Test
+    void test6() {
+        StringCalculator sc = new StringCalculator();
+        assertEquals(13, sc.add("//*\\n1,3*9"));
+    }
 }

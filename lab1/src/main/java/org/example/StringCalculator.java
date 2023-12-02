@@ -1,4 +1,6 @@
 package org.example;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringCalculator{
     public int add(String numbers){
@@ -6,6 +8,19 @@ public class StringCalculator{
         if (numbers.isEmpty()){
             return res;
         }
+
+        String patt = "^//.\\\\n";
+
+        Pattern p = Pattern.compile(patt);
+        Matcher m = p.matcher(numbers);
+
+        if (m.find()) {
+            char del = numbers.charAt(2);
+            int end = m.end();
+            numbers = numbers.substring(end);
+            numbers = numbers.replace(del,',');
+        }
+
         numbers = numbers.replaceAll("\\\\n",",");
         String[] num_array = numbers.split(",");
 
