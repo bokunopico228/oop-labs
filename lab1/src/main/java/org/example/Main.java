@@ -11,10 +11,11 @@ public class Main {
         while (true) {
             try{
                 System.out.print("""
-                ----------
-                enter numbers divided by ',' or '\\n'.
-                to set a custom delimiter use this template: //[delimiter]\\n[numbers] (e.g.: //*\\n1,2\\n3*4).
-                to quit enter q:\s""");
+                        ----------
+                        enter numbers divided by ',' or '\\n'.
+                        to set a custom delimiter use this template: //[delimiter]\\n[numbers] (e.g.: //*\\n1,2\\n3*4).
+                        negative numbers are not allowed.
+                        to quit enter q:\s""");
 
                 inp = scan.nextLine();
                 if (inp.equals("q")) {
