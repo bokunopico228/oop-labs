@@ -10,15 +10,22 @@ public class StringCalculator{
         }
 
         String patt = "^//.\\\\n";
-
         Pattern p = Pattern.compile(patt);
         Matcher m = p.matcher(numbers);
 
-        if (m.find()) {
+        String patt2 = "^//\\Q[\\E.+]\\\\n";
+        Pattern p2 = Pattern.compile(patt2);
+        Matcher m2 = p2.matcher(numbers);
+
+        if (m.find()){
             char del = numbers.charAt(2);
-            int end = m.end();
-            numbers = numbers.substring(end);
-            numbers = numbers.replace(del,',');
+            numbers = numbers.substring(m.end());
+            numbers = numbers.replace(del, ',');
+
+        }else if (m2.find()) {
+            String del = numbers.substring(3, numbers.indexOf("]\\n"));
+            numbers = numbers.substring(m2.end());
+            numbers = numbers.replace(del,",");
         }
 
         numbers = numbers.replaceAll("\\\\n",",");
