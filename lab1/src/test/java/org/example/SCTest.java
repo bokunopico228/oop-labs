@@ -39,4 +39,10 @@ public class SCTest {
         StringCalculator sc = new StringCalculator();
         assertEquals(13, sc.add("//*\\n1,3*9"));
     }
+
+    @Test
+    void test7() {
+        StringCalculator sc = new StringCalculator();
+        assertEquals(1003, sc.add("//*\\n1001\\n3*1000"));
+    }
 }
