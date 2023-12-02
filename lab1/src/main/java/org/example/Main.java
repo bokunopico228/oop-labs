@@ -14,10 +14,11 @@ public class Main {
                         ----------
                         enter numbers divided by ',' or '\\n'.
                         to set a custom delimiter use this template: //[delimiter]\\n[numbers] (e.g.: //*\\n1,2\\n3*4).
-                        to set a custom delimiter of any length use this template: //[delimiter]\\n (e.g.: //[***]\\n1***2***3).
+                        to set custom delimiters of any length use this template: //[del1][del2]\\n (e.g.: //[**][%%%]\\n1%%%2**3).
                         negative numbers are not allowed.
                         numbers bigger than 1000 will be ignored.
                         to quit enter q:\s""");
+
                 inp = scan.nextLine();
                 if (inp.equals("q")) {
                     break;

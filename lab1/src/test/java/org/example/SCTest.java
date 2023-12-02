@@ -51,4 +51,10 @@ public class SCTest {
         StringCalculator sc = new StringCalculator();
         assertEquals(17, sc.add("//[***]\\n12***2,3"));
     }
+
+    @Test
+    void test9() {
+        StringCalculator sc = new StringCalculator();
+        assertEquals(66, sc.add("//[**][%%%]\\n11%%%22**33"));
+    }
 }
